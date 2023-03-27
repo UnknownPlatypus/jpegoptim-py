@@ -1,0 +1,6 @@
+- id: jpegoptim
+  name: jpegoptim
+  description: Optimize JPEG files with jpegoptim
+  entry: jpegoptim
+  language: python
+  types: [jpeg]
