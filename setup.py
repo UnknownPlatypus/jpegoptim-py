@@ -16,21 +16,21 @@ from distutils.core import Command
 from setuptools import setup
 from setuptools.command.install import install as orig_install
 
-JPEGOPTIM_VERSION = "1.5.3"
+JPEGOPTIM_VERSION = "1.5.4"
 PY_VERSION = "1"  # Python wrapper version
 
 POSTFIX_SHA256 = {
     ("linux", "x86_64"): (
         "x64-linux.zip",
-        "ad6b38ed69285eec815027484ef2f933d606dc5089ab3ebb4c3a77ca5f70f34f",
+        "75f6975454bc33cce5ff46fd13809c010bec0f2c43de26a7e3b92cc6ece85bb4",
     ),
     ("darwin", "x86_64"): (
         "x64-macos.zip",
-        "169557eb91a2f929851532b42133682e79c7325cc3a4e234cdc3cb185dea36ff",
+        "6a170a50fe0d5aa01636d64ae7647ac615867c184f2fb4ead557c284005deae8",
     ),
     ("win32", "AMD64"): (
         "x64-windows.zip",
-        "4a7676e567198324f289348ce86251bbd1f4c5c1b1311808f78246599f44236a",
+        "70d9a26b3bd9c4331d10c03f7431afa8eecef0b1d6ceef30455f70433a3c3311",
     ),
 }
 POSTFIX_SHA256[("darwin", "arm64")] = POSTFIX_SHA256[("darwin", "x86_64")]
@@ -39,7 +39,7 @@ POSTFIX_SHA256[("darwin", "arm64")] = POSTFIX_SHA256[("darwin", "x86_64")]
 def get_download_url() -> tuple[str, str]:
     postfix, sha256 = POSTFIX_SHA256[(sys.platform, platform.machine())]
     url = (
-        f"https://github.com/tjko/jpegoptim/releases/download/"
+        f"https://github.com/UnknownPlatypus/jpegoptim/releases/download/"
         f"v{JPEGOPTIM_VERSION}/jpegoptim-{JPEGOPTIM_VERSION}-{postfix}"
     )
     return url, sha256

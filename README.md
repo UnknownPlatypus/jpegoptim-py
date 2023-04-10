@@ -6,7 +6,7 @@
 A python wrapper to provide a pip-installable [jpegoptim](https://github.com/tjko/jpegoptim) binary.
 
 Internally this package provides a convenient way to download the pre-built
-shellcheck binary for your particular platform.
+jpegoptim binary for your particular platform.
 
 ### Installation
 
@@ -27,9 +27,22 @@ Sample `.pre-commit-config.yaml`:
 
 ```yaml
 -   repo: https://github.com/UnknownPlatypus/jpegoptim-py
-    rev: v1.5.3.1
+    rev: v1.5.4.1
     hooks:
     -   id: jpegoptim
+```
+
+Lossy compression [is not idempotent](https://github.com/tjko/jpegoptim/issues/9). In that case, consider adding a 
+threshold, otherwise you might block the commit for too long.
+
+Sample `.pre-commit-config.yaml` with lossy compression enabled:
+
+```yaml
+-   repo: https://github.com/UnknownPlatypus/jpegoptim-py
+    rev: v1.5.4.1
+    hooks:
+    -   id: jpegoptim
+        args: [ "--strip-all", "--all-progressive", "--max", "85", "--threshold", "4"]
 ```
 
 ### References
