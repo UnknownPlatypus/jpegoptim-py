@@ -16,21 +16,21 @@ from distutils.core import Command
 from setuptools import setup
 from setuptools.command.install import install as orig_install
 
-JPEGOPTIM_VERSION = "1.5.4"
+JPEGOPTIM_VERSION = "1.5.5"
 PY_VERSION = "1"  # Python wrapper version
 
 POSTFIX_SHA256 = {
     ("linux", "x86_64"): (
         "x64-linux.zip",
-        "6dbd823da676dd4b5844b34c5af5b27e1673473a9a065daab2f0ef2f54e78ec9",
+        "1b3f9f3e92771f49796b3060c7f338e0bb12c71c668d821446772bd92092d865",
     ),
     ("darwin", "x86_64"): (
         "x64-osx.zip",
-        "a2819584fa44ac34e6eb56f068f26dfc2e654348db258af64bc032ef5209f17b",
+        "7ab86a5a0e13b3df7ec496c61978e7a71c275cf1a0d2cc35de07ba8ae0c10b95",
     ),
     ("win32", "AMD64"): (
         "x64-windows.zip",
-        "ebd600755558e249b4bc77e5a9072325be164d0327d4ba89531727544600a036",
+        "ffa037ecc12e002c1c87c334d8ebaed988ec738c3ad606d054272950519b09a8",
     ),
 }
 POSTFIX_SHA256[("darwin", "arm64")] = POSTFIX_SHA256[("darwin", "x86_64")]
