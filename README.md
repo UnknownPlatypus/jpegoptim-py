@@ -42,7 +42,7 @@ Sample `.pre-commit-config.yaml` with lossy compression enabled:
     rev: v1.5.5.1
     hooks:
     -   id: jpegoptim
-        args: [ "--strip-all", "--all-progressive", "--max", "85", "--threshold", "4"]
+        args: [--strip-all, --all-progressive, --max=85, --threshold=3]
 ```
 
 ### References
