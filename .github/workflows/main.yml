@@ -18,7 +18,6 @@ jobs:
     with:
       env: '["py38"]'
       os: macos-latest
-      wheel-tags: true
   main-macos-intel:
     uses: asottile/workflows/.github/workflows/tox.yml@v1.6.1
     with:
