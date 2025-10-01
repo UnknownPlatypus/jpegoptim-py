@@ -8,24 +8,20 @@ on:
 
 jobs:
   main-windows:
-    uses: asottile/workflows/.github/workflows/tox.yml@v1.6.1
+    uses: asottile/workflows/.github/workflows/tox.yml@v1.8.1
     with:
-      env: '["py38"]'
+      env: '["py"]'
       os: windows-latest
       wheel-tags: true
   main-macos:
-    uses: asottile/workflows/.github/workflows/tox.yml@v1.6.1
+    uses: asottile/workflows/.github/workflows/tox.yml@v1.8.1
     with:
-      env: '["py38"]'
+      env: '["py"]'
       os: macos-latest
-  main-macos-intel:
-    uses: asottile/workflows/.github/workflows/tox.yml@v1.6.1
-    with:
-      env: '["py38"]'
-      os: macos-13
       wheel-tags: true
   main-linux:
-    uses: asottile/workflows/.github/workflows/tox.yml@v1.6.1
+    uses: asottile/workflows/.github/workflows/tox.yml@v1.8.1
     with:
-      env: '["py38"]'
+      env: '["py"]'
       os: ubuntu-latest
+      wheel-tags: true
